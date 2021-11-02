@@ -74,6 +74,7 @@ do
 	echo $fullarg
 	fullcmd="mkvmerge -o $outdir/\"$mvname\".mkv $fullarg \"$PWD\"/$m2ts"
 	echo $fullcmd | tee -a ~/movie.sh
+	[[ $PWD == *mount* ]] $$ echo "sudo umount /dev/loop$i" | tee -a ~/movie.sh
 
 	unset allauname
 	unset allsubname
